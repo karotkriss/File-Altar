@@ -1,9 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    forceSwcTransforms: true,
-  },
   swcMinify: false,
+  compiler: {
+    // Disable SWC compiler
+    removeConsole: false,
+  },
+  experimental: {
+    esmExternals: false,
+  },
 }
 
 module.exports = nextConfig
